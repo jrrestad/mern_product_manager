@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from '@reach/router'
 import axios from 'axios';
 
 const DisplayAll = () => {
@@ -33,7 +34,9 @@ const DisplayAll = () => {
                         {
                             allData.map((item, i) => 
                             <tr key={i}>
-                                <td>{item.title}</td>
+                                <td>
+                                    <Link to={`/product/${item._id}`}>{item.title}</Link>
+                                </td>
                                 <td>${item.price}</td>
                                 <td>{item.description}</td>
                             </tr>

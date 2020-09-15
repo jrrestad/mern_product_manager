@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, Link } from '@reach/router';
 import DisplayAll from './components/DisplayAll'
 import ProductForm from './components/ProductForm'
+import Details from './components/Details'
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       </div>
       <Router>
         <DisplayAll path="/all"/>
+        <Details path="product/:id"/>
         <ProductForm path="/new"/>
       </Router>
     </div>
